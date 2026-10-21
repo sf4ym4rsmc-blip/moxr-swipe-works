@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+ <meta name="theme-color" content="#0b1030"><meta name="apple-mobile-web-app-capable" content="yes">
+ <title>墨MOXR · 把空间变成故事</title>
+ <meta name="description" content="左右滑动，探索MOXR的MR空间交互、全景VR沉浸影像与虚拟现实电影。面向文旅街区、商场乐园、研学科普与医学教学。">
+ <meta property="og:title" content="墨MOXR · 把空间变成故事"><meta property="og:description" content="MR空间交互 × VR沉浸影像，左右滑动查看作品与合作方向。">
+ <meta property="og:type" content="website"><meta property="og:url" content="https://sf4ym4rsmc-blip.github.io/moxr-swipe-works">
+ <meta property="og:image" content="https://sf4ym4rsmc-blip.github.io/moxr-swipe-works/assets/share-cover.jpg">
+ <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body data-theme="dark">
+ <div class="app">
+  <header class="app-header"><a class="brand" href="#page-1" aria-label="MOXR首页"><span>墨</span> MOXR</a><div class="header-actions"><button class="text-button" id="contact">合作</button><button class="icon-button" id="share" aria-label="分享作品集"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15V3m-4 4 4-4 4 4M5 12v8h14v-8"/></svg></button><button class="icon-button" id="open-menu" aria-label="打开作品目录"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></div></header>
+  <main id="deck" class="deck" aria-label="MOXR沉浸式作品集，左右滑动翻页" tabindex="0"></main>
+  <nav class="navigation" aria-label="翻页控制"><div class="progress" id="progress"></div><div class="navigation-row"><button id="previous" class="icon-button" aria-label="上一页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button><button id="page-menu" class="page-counter" aria-label="查看作品目录"><span id="page-number">01</span><span class="slash">/</span>09 <span id="chapter-name">作品精选</span></button><button id="next" class="icon-button" aria-label="下一页"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button></div></nav>
+ </div>
+ <dialog id="menu-dialog" aria-labelledby="menu-title"><div class="dialog-head"><h2 id="menu-title">选择一页，进入作品</h2><button class="icon-button close" aria-label="关闭目录">×</button></div><div id="menu-items"></div></dialog>
+ <dialog id="photo-dialog" class="photo-dialog" aria-label="图片查看"><div class="dialog-head"><p id="photo-label">体验示意</p><button class="icon-button close" aria-label="关闭图片">×</button></div><div class="photo-scroll"><img id="photo-full" alt=""><p class="photo-instruction">可使用双指放大，或长按图片保存</p></div></dialog>
+ <dialog id="share-dialog" aria-labelledby="share-title"><div class="dialog-head"><h2 id="share-title">分享墨MOXR作品</h2><button class="icon-button close" aria-label="关闭分享提示">×</button></div><p id="share-description"></p><input id="share-link" readonly aria-label="作品集分享链接"><button class="primary" id="copy-link">复制作品链接</button></dialog>
+ <div class="toast" role="status" aria-live="polite" id="toast"></div><div class="sr-only" aria-live="polite" id="page-announcement"></div>
+</body></html>
